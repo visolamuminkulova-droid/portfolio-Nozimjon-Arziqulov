@@ -87,7 +87,10 @@ a { text-decoration: none; color: inherit; }
     radial-gradient(circle at 15% 20%, rgba(124, 92, 255, 0.25), transparent 40%),
     radial-gradient(circle at 85% 80%, rgba(0, 212, 255, 0.2), transparent 40%);
 }
-.hero-text { flex: 1; }
+.hero-text { flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3fr 1fr);
+}
 .hello { color: var(--c2); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
 .hero h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.15; margin: 10px 0; font-weight: 800; }
 .role { font-size: 1.4rem; font-weight: 600; margin-bottom: 18px; }
@@ -203,34 +206,120 @@ a { text-decoration: none; color: inherit; }
   font-size: .8rem;
 }
 
-/* ===== LOYIHALAR (3D) ===== */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-  perspective: 1200px;
+/* From Uiverse.io by imtausef */ 
+
+
+.card{
+  margin-left: 400px;
+  padding-top: 50px;
+  /* border-radius: 10px; */
+  border: 3px solid #141414;
+  transform-style: preserve-3d;
+  background: linear-gradient(white , white);
+  background-size: 60px 60px;
+  background-position:
+    0 0,
+    0 0;
+  background-color: #141414;
+  width: 100%;
+  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
 }
-.project-inner {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-  transition: transform .5s, box-shadow .5s;
+
+.card:hover {
+  background-position:
+    -100px 100px,
+    -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box {
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
   transform-style: preserve-3d;
 }
-.project:hover .project-inner {
-  transform: rotateX(8deg) rotateY(-10deg) translateZ(20px);
-  box-shadow: 25px 35px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(124, 92, 255, 0.35);
-}
-.project-img { height: 190px; border-radius: 16px; margin-bottom: 18px; transform: translateZ(40px); }
-.p1 { background: linear-gradient(135deg, #7c5cff, #00d4ff); }
-.p2 { background: linear-gradient(135deg, #ff5ca8, #ffb347); }
-.p3 { background: linear-gradient(135deg, #00e5a0, #00a3ff); }
-.project h3 { font-size: 1.25rem; transform: translateZ(30px); }
-.project p { color: var(--muted); transform: translateZ(20px); }
 
+.content-box .card-title {
+  display: inline-block;
+  color: #141414;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .card-content {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #141414;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 9px;
+  text-transform: uppercase;
+  /* border-radius: 5px; */
+  background:  rgb(127, 212, 212);
+  padding: 0.5rem 0.7rem;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+
+
+.date-box span {
+  display: block;
+  text-align: center;
+}
+
+.date-box .month {
+  color: #8ed500;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: #8ed500;
+}
+.see-more{
+  color: white;
+}
+.card-content p{
+  color: white;
+}
+.card-title{
+  color: white;
+}
+
+.cardimg{
+  background: cover;
+}
+.parent{
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 /* ===== ALOQA FORMASI ===== */
 .form { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
 .row { display: flex; gap: 18px; }
@@ -282,4 +371,120 @@ a { text-decoration: none; color: inherit; }
   .nav a:not(.btn) { display: none; }
   .row { flex-direction: column; }
   .footer { justify-content: center; text-align: center; }
+}
+/* From Uiverse.io by imtausef */ 
+.parent {
+  width: 1;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.card {
+  padding-top: 50px;
+  /* border-radius: 10px; */
+  border: 3px solid #141414;
+  transform-style: preserve-3d;
+  background: linear-gradient(white , white);
+  background-size: 60px 60px;
+  background-position:
+    0 0,
+    0 0;
+  background-color: #141414;
+  width: 100%;
+  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  background-position:
+    -100px 100px,
+    -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box {
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.content-box .card-title {
+  display: inline-block;
+  color: #141414;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .card-content {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #141414;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 9px;
+  text-transform: uppercase;
+  /* border-radius: 5px; */
+  background:  rgb(127, 212, 212);
+  padding: 0.5rem 0.7rem;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+
+
+.date-box span {
+  display: block;
+  text-align: center;
+}
+
+.date-box .month {
+  color: #8ed500;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: #8ed500;
+}
+.see-more{
+  color: white;
+}
+.card-content p{
+  color: white;
+}
+.card-title{
+  color: white;
+}
+
+.cardimg{
+  background: cover;
+}
+.parent{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
