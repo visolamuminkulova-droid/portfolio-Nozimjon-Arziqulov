@@ -206,119 +206,113 @@ a { text-decoration: none; color: inherit; }
   font-size: .8rem;
 }
 
-/* From Uiverse.io by imtausef */ 
-
-
-.card{
-  margin-left: 400px;
-  padding-top: 50px;
-  /* border-radius: 10px; */
-  border: 3px solid #141414;
-  transform-style: preserve-3d;
-  background: linear-gradient(white , white);
-  background-size: 60px 60px;
-  background-position:
-    0 0,
-    0 0;
-  background-color: #141414;
-  width: 100%;
-  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
-  transition: all 0.5s ease-in-out;
-}
-
-.card:hover {
-  background-position:
-    -100px 100px,
-    -100px 100px;
-  transform: rotate3d(0.5, 1, 0, 30deg);
-}
-
-.content-box {
-  /* border-radius: 10px 100px 10px 10px; */
-  transition: all 0.5s ease-in-out;
-  padding: 60px 25px 25px 25px;
-  transform-style: preserve-3d;
-}
-
-.content-box .card-title {
-  display: inline-block;
-  color: #141414;
-  font-size: 25px;
-  font-weight: 900;
-  transition: all 0.5s ease-in-out;
-  transform: translate3d(0px, 0px, 50px);
-}
-
-.content-box .card-title:hover {
-  transform: translate3d(0px, 0px, 60px);
-}
-
-.content-box .card-content {
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 700;
-  color: #141414;
-  transition: all 0.5s ease-in-out;
-  transform: translate3d(0px, 0px, 30px);
-}
-
-.content-box .card-content:hover {
-  transform: translate3d(0px, 0px, 60px);
-}
-
-.content-box .see-more {
-  cursor: pointer;
-  margin-top: 1rem;
-  display: inline-block;
-  font-weight: 900;
-  font-size: 9px;
-  text-transform: uppercase;
-  /* border-radius: 5px; */
-  background:  rgb(127, 212, 212);
-  padding: 0.5rem 0.7rem;
-  transition: all 0.5s ease-in-out;
-  transform: translate3d(0px, 0px, 20px);
-}
-
-.content-box .see-more:hover {
-  transform: translate3d(0px, 0px, 60px);
-}
-
-
-
-.date-box span {
-  display: block;
+.projects {
+  padding: 60px 20px;
+  background: #050816;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.date-box .month {
-  color: #8ed500;
-  font-size: 9px;
-  font-weight: 700;
+.projects-title {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.projects-title span {
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.projects-sub {
+  color: #8fb4ff;
+  margin-bottom: 50px;
 }
 
-.date-box .date {
-  font-size: 20px;
-  font-weight: 900;
-  color: #8ed500;
-}
-.see-more{
-  color: white;
-}
-.card-content p{
-  color: white;
-}
-.card-title{
-  color: white;
-}
-
-.cardimg{
-  background: cover;
-}
-.parent{
-
+/* ===== 3 ta kartani ushlab turuvchi container ===== */
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  perspective: 1200px;          /* 3D uchun */
+}
+
+/* ===== Karta ===== */
+.card {
+  background: #0b1230;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 10px;          /* qirralar qisqartirildi */
+  padding: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+.card:hover {
+  transform: rotateX(4deg) rotateY(-6deg) translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.25);
+}
+
+.card-img {
+  position: relative;
+  border-radius: 6px;           /* ichki rasm qirrasi ham kichik */
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Badge'lar ===== */
+.badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+}
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.badge-dark  { background: rgba(5, 8, 22, 0.85); }
+.badge-green { background: #10b981; }
+
+/* ===== Pastki ma'lumot paneli ===== */
+.card-info {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(5, 8, 22, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 6px;
+  color: #fff;
+  text-align: left;
+}
+.card-info h3 { font-size: 13px; margin: 0 0 3px; }
+.card-info small { font-size: 9px; color: #9ca3af; }
+.price { text-align: right; }
+.price strong { font-size: 15px; }
+.price span { font-size: 9px; color: #9ca3af; }
+
+/* ===== Moslashuvchan (responsive) ===== */
+@media (max-width: 992px) {
+  .cards-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cards-container { grid-template-columns: 1fr; }
 }
 /* ===== ALOQA FORMASI ===== */
 .form { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
@@ -371,120 +365,4 @@ a { text-decoration: none; color: inherit; }
   .nav a:not(.btn) { display: none; }
   .row { flex-direction: column; }
   .footer { justify-content: center; text-align: center; }
-}
-/* From Uiverse.io by imtausef */ 
-.parent {
-  width: 1;
-  padding: 20px;
-  perspective: 1000px;
-}
-
-.card {
-  padding-top: 50px;
-  /* border-radius: 10px; */
-  border: 3px solid #141414;
-  transform-style: preserve-3d;
-  background: linear-gradient(white , white);
-  background-size: 60px 60px;
-  background-position:
-    0 0,
-    0 0;
-  background-color: #141414;
-  width: 100%;
-  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
-  transition: all 0.5s ease-in-out;
-}
-
-.card:hover {
-  background-position:
-    -100px 100px,
-    -100px 100px;
-  transform: rotate3d(0.5, 1, 0, 30deg);
-}
-
-.content-box {
-  /* border-radius: 10px 100px 10px 10px; */
-  transition: all 0.5s ease-in-out;
-  padding: 60px 25px 25px 25px;
-  transform-style: preserve-3d;
-}
-
-.content-box .card-title {
-  display: inline-block;
-  color: #141414;
-  font-size: 25px;
-  font-weight: 900;
-  transition: all 0.5s ease-in-out;
-  transform: translate3d(0px, 0px, 50px);
-}
-
-.content-box .card-title:hover {
-  transform: translate3d(0px, 0px, 60px);
-}
-
-.content-box .card-content {
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 700;
-  color: #141414;
-  transition: all 0.5s ease-in-out;
-  transform: translate3d(0px, 0px, 30px);
-}
-
-.content-box .card-content:hover {
-  transform: translate3d(0px, 0px, 60px);
-}
-
-.content-box .see-more {
-  cursor: pointer;
-  margin-top: 1rem;
-  display: inline-block;
-  font-weight: 900;
-  font-size: 9px;
-  text-transform: uppercase;
-  /* border-radius: 5px; */
-  background:  rgb(127, 212, 212);
-  padding: 0.5rem 0.7rem;
-  transition: all 0.5s ease-in-out;
-  transform: translate3d(0px, 0px, 20px);
-}
-
-.content-box .see-more:hover {
-  transform: translate3d(0px, 0px, 60px);
-}
-
-
-
-.date-box span {
-  display: block;
-  text-align: center;
-}
-
-.date-box .month {
-  color: #8ed500;
-  font-size: 9px;
-  font-weight: 700;
-}
-
-.date-box .date {
-  font-size: 20px;
-  font-weight: 900;
-  color: #8ed500;
-}
-.see-more{
-  color: white;
-}
-.card-content p{
-  color: white;
-}
-.card-title{
-  color: white;
-}
-
-.cardimg{
-  background: cover;
-}
-.parent{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
 }
