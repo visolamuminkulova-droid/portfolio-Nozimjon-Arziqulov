@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -125,83 +128,128 @@
     </section>
 
     <!-- LOYIHALAR -->
-    
+    <section class="projects" id="projects">
+      <h2 class="projects-title">Mening <span>Loyihalarim</span></h2>
+      <p class="projects-sub">Kursorni kartalar ustiga olib boring</p>
 
-     <section class="projects" id="loyihalar">
-  <h2 class="projects-title">Mening <span>Loyihalarim</span></h2>
-  <p class="projects-sub">Kursorni kartalar ustiga olib boring</p>
-
-  <div class="cards-container">
-
-    <!-- 1-karta -->
-    <article class="card">
-      <div class="card-img">
-        <img src="./malibu.png" alt="Cadillac CT5 / Malibu Prime">
-        <div class="badges">
-          <span class="badge badge-dark">★ TOP PREMIUM</span>
-          <span class="badge badge-green">Mavjud</span>
+      <div class="project-head">
+        <div class="project-logo">D</div>
+        <div class="project-text">
+          <h3>Drive<span>.uz</span></h3>
+          <p>Mashina ijarasi platformasi: biznes, sedan va oilaviy SUV avtomobillari.</p>
         </div>
-        <div class="card-info">
-          <div>
-            <h3>drive.uz</h3>
-            <small>Luks Biznes Klas • 2024 Yangi Seriya</small>
-          </div>
-          <div class="price">
-            <small>MAXSUS NARX</small>
-            <strong>450 000</strong> <span>so'm/kun</span>
-          </div>
+        <div class="project-stats">
+          <div><strong>4</strong><small>Mashina</small></div>
+          <div><strong>24/7</strong><small>Xizmat</small></div>
         </div>
+        <a href="#" class="btn">Saytga o'tish →</a>
       </div>
-    </article>
 
-    <!-- 2-karta -->
-    <article class="card">
-      <div class="card-img">
-        <img src="./kiak5.png" alt="Loyiha 2">
-        <div class="badges">
-          <span class="badge badge-dark">★ TOP</span>
-          <span class="badge badge-green">Mavjud</span>
-        </div>
-        <div class="card-info">
-          <div>
-            <h3>drive.uz</h3>
-            <small>Qisqa tavsif • 2024</small>
-          </div>
-          <div class="price">
-            <small>NARX</small>
-            <strong>350 000</strong> <span>so'm/kun</span>
-          </div>
-        </div>
-      </div>
-    </article>
+      <!-- Faqat kartalar shu ichida bo'lsin -->
+      <div class="owl-carousel cards-slider">
 
-    <!-- 3-karta -->
-    <article class="card">
-      <div class="card-img">
-        <img src="./traverse.png" alt="Loyiha 3">
-        <div class="badges">
-          <span class="badge badge-dark">★ TOP</span>
-          <span class="badge badge-green">Mavjud</span>
-        </div>
-        <div class="card-info">
-          <div>
-            <h3>drive.uz</h3>
-            <small>Qisqa tavsif • 2024</small>
+        <article class="card">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="card-img">
+              <img src="malibu.png" alt="Chevrolet Malibu">
+              <div class="img-shade"></div>
+              <div class="badges">
+                <span class="badge badge-dark">★ TOP</span>
+                <span class="badge badge-green"><i></i>Mavjud</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Chevrolet Malibu</h3>
+              <div class="tags"><span>Biznes klass</span><span>2024</span><span>Sedan</span></div>
+              <p class="desc">Shahar va uzoq yo'llar uchun qulay, jimjit va keng salonli sedan. Muhim uchrashuv yoki
+                safarlar uchun nufuzli tanlov.</p>
+              <div class="card-footer">
+                <div class="price"><small>Narx</small><strong>450 000 <em>so'm/kun</em></strong></div>
+                <a href="#" class="btn">Ko'rish →</a>
+              </div>
+            </div>
           </div>
-          <div class="price">
-            <small>NARX</small>
-            <strong>300 000</strong> <span>so'm/kun</span>
-          </div>
-        </div>
-      </div>
-    </article>
+          <div class="glare"></div>
+        </article>
 
-  </div>
-</section>
+        <article class="card">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="card-img">
+              <img src="./kiak5.png" alt="Kia K5">
+              <div class="img-shade"></div>
+              <div class="badges">
+                <span class="badge badge-dark">★ TOP</span>
+                <span class="badge badge-green"><i></i>Mavjud</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Kia K5</h3>
+              <div class="tags"><span>Biznes klass</span><span>2024</span><span>Sedan</span></div>
+              <p class="desc">Sport ruhidagi zamonaviy dizayn, qulay salon va yengil boshqaruv. Yoshlar va faol hayot
+                tarzini yoqtiruvchilar uchun ajoyib variant.</p>
+              <div class="card-footer">
+                <div class="price"><small>Narx</small><strong>350 000 <em>so'm/kun</em></strong></div>
+                <a href="#" class="btn">Ko'rish →</a>
+              </div>
+            </div>
+          </div>
+          <div class="glare"></div>
+        </article>
+
+        <article class="card">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="card-img">
+              <img src="traverse.png" alt="Chevrolet Traverse">
+              <div class="img-shade"></div>
+              <div class="badges">
+                <span class="badge badge-dark">★ TOP</span>
+                <span class="badge badge-green"><i></i>Mavjud</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Chevrolet Traverse</h3>
+              <div class="tags"><span>SUV</span><span>2024</span><span>Oilaviy</span></div>
+              <p class="desc">Katta oila va uzoq safarlar uchun keng, ko'p o'rinli SUV. Yuk uchun joy ko'p, yo'lda
+                ishonchli va qulay.</p>
+              <div class="card-footer">
+                <div class="price"><small>Narx</small><strong>300 000 <em>so'm/kun</em></strong></div>
+                <a href="#" class="btn">Ko'rish →</a>
+              </div>
+            </div>
+          </div>
+          <div class="glare"></div>
+        </article>
+
+        <article class="card">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <div class="card-img">
+              <img src="./tracker.jpg" alt="Chevrolet Tracker">
+              <div class="img-shade"></div>
+              <div class="badges">
+                <span class="badge badge-dark">★ TOP</span>
+                <span class="badge badge-green"><i></i>Mavjud</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Chevrolet Tracker</h3>
+              <div class="tags"><span>Krossover</span><span>2024</span><span>Shahar</span></div>
+              <p class="desc">Ixcham va chaqqon krossover. Shahar ichida qulay, yoqilg'i tejamkor, yo'l va yuk uchun
+                yetarli joyga ega.</p>
+              <div class="card-footer">
+                <div class="price"><small>Narx</small><strong>280 000 <em>so'm/kun</em></strong></div>
+                <a href="#" class="btn">Ko'rish →</a>
+              </div>
+            </div>
+          </div>
+          <div class="glare"></div>
+        </article>
 
       </div>
     </section>
-
     <!-- ALOQA -->
     <section class="section alt" id="contact">
       <h2 class="title">Men bilan <span class="grad">Bog'laning</span></h2>
@@ -230,7 +278,37 @@
       <a href="#">GitHub</a>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(function () {
+      $('.cards-slider').owlCarousel({
+        loop: true,
+        margin: 28,
+        nav: true,
+        dots: true,
+        navText: ['‹', '›'],
+        smartSpeed: 600,
+        autoplay: true,
+        autoplayTimeout: 4500,
+        autoplayHoverPause: true,
+        responsive: { 0: { items: 1 }, 700: { items: 2 }, 1000: { items: 3 } }
+      });
 
+      $(document).on('mousemove', '.cards-slider .card', function (e) {
+        const r = this.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        this.style.transform =
+          `rotateX(${(0.5 - y) * 12}deg) rotateY(${(x - 0.5) * 12}deg) translateY(-8px) scale(1.02)`;
+        this.style.setProperty('--gx', `${x * 100}%`);
+        this.style.setProperty('--gy', `${y * 100}%`);
+      });
+      $(document).on('mouseleave', '.cards-slider .card', function () {
+        this.style.transform = '';
+      });
+    });
+  </script>
 </body>
 
 </html>
